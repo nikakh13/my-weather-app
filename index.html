@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <title>Homework 5</title>
+  </head>
+
+  <body>
+    
+    <div class="container mainbody">
+      
+        <div class="container-fluid search">
+          <form class="d-flex search-engine" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Enter a city"
+              aria-label="Search"
+              id = "new-city"
+            />
+            <button class="btn btn-light" id="search-city">🔍</button>
+            <button class="btn btn-light" id="current-city">Current</button>
+          </form>
+        </div>
+      
+
+      <br />
+
+      <div class="card" style="max-width: 100%">
+        <div class="card-body">
+          <h4 class="card-title" id = "city">Enter your city</h4>
+          <p class="card-text">
+            Currently 00:00 - 00 March, Tuesday
+          </p>
+
+      <div class="container text-center">
+        <div class="row align-items-start">
+          <div class="col-6 first">
+            <div class="card">
+              <div class="card-body">
+                <div class="container text-center">
+                  <div class="row align-items-start">
+                    <div class="col">
+                     <span class="maindegree" id = "main-degree">0</span> <a href="#" class = "grade" id="celsius">°C </a><span class = "btwn grades"> | </span><a href="#" class = "grade" id="fahrenheit">°F</a> 
+                    </div>
+                    <div class="col">
+                     <p class="mainemoji">🌦️</p>
+                    </div>
+                   </div>
+                 </div>
+                
+                <p class="card-text" id="main-description">Cloudy, light rain</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 second">
+            <div class="card">
+              <div class="card-body">
+                <div class="container text-center">
+                  <div class="row align-items-start">
+                   <div class="col">
+                      00:00 <br /><br /> <p class = "emojiday"> 🌧️ </p> 2°
+                   </div>
+                   <div class="col">
+                      06:00 <br /><br /> <p class = "emojiday"> 🌦️ </p> 1°
+                   </div>
+                   <div class="col">
+                      12:00 <br /><br /> <p class = "emojiday"> 🌧️ </p> 1°
+                   </div>
+                   <div class="col">
+                      18:00 <br /><br /> <p class = "emojiday"> 🌧️ </p> 0°
+                   </div>
+                  </div>
+               </div>
+              </div>
+             </div>
+          </div>
+        </div>
+      </div>
+          
+      <br />
+       
+        <div class="card" style="max-width: 100%">
+          <div class="card-body">
+            <div class="container text-center">
+              <div class="row align-items-start">
+               <div class="col">
+                  <span class = "atmosphere"> Feels like </span> <br />🤷🏻‍♀️ <span id="feels-like">0</span>°
+               </div>
+               <div class="col">
+                 <span class = "atmosphere"> Wind </span> <br /> 🌀 <span id="wind">12</span> m/s
+               </div>
+               <div class="col">
+                  <span class = "atmosphere"> Humidity </span> <br /> 💧 <span id="humidity">65</span>%
+               </div>
+               <div class="col">
+                  <span class = "atmosphere"> Pressure </span> <br /> 🌡️ <span id="pressure">740</span>
+               </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <br />
+       
+        <div class="card" style="max-width: 100%">
+          <div class="card-body">
+            <div class="container text-center">
+              <div class="row align-items-start">
+               <div class="col">
+                  <p class = "emojiday">☀️</p> <span class = "degree"> 2° </span> <div class = "dayOfWeek"> Mon </div>
+               </div>
+               <div class="col">
+                  <p class = "emojiday">🌤️</p> <span class = "degree"> 3° </span> <div class = "dayOfWeek"> Tue </div>
+               </div>
+               <div class="col">
+                  <p class = "emojiday">🌦️</p> <span class = "degree"> 1° </span> <div class = "dayOfWeek"> Wen </div>
+               </div>
+               <div class="col">
+                  <p class = "emojiday">🌨️</p> <span class = "degree"> -2° </span> <div class = "dayOfWeek"> Thu </div>
+               </div>
+               <div class="col">
+                  <p class = "emojiday">🌧️</p> <span class = "degree"> 0° </span> <div class = "dayOfWeek"> Fri </div>
+               </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
