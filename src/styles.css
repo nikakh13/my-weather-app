@@ -69,3 +69,17 @@
   background-color: #155d40b0;
   color: #fff;
 }
+.myLink {
+  text-decoration: none;
+}
+.myLink:hover {
+  color: rgb(93, 160, 255);
+}
+.link {
+  margin: 12px 0 0 0;
+  font-size: 18px;
+}
+
+#main-description {
+  margin: 3px 0 0 0;
+}
