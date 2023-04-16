@@ -88,6 +88,11 @@ function showTemperature1(response) {
   cityName.innerHTML = `${response.data.name}`;
   let mainDescription = document.querySelector("#main-description");
   mainDescription.innerHTML = `${response.data.weather[0].main}, ${response.data.weather[0].description}`;
+  let icon = document.querySelector("#main-icon");
+  icon.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 let showCity = document.querySelector("#current-city");
