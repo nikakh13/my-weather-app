@@ -109,12 +109,6 @@ function showTemperature(event) {
   axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature1);
 }
 
-//function userCity(response) {
-//let temperature = Math.round(response.data.main.temp);
-//let tempElement = document.querySelector("#main-degree");
-//tempElement.innerHTML = `${temperature}`;
-//}
-
 //search engine, cities
 function changeCity(event) {
   event.preventDefault();
