@@ -45,7 +45,7 @@
 .grade {
   font-size: 15px;
   text-decoration: none;
-  color: black;
+  color: rgb(54, 107, 254);
   position: relative;
   bottom: 35px;
   font-weight: 500;
@@ -60,8 +60,17 @@
 }
 
 .grade:hover {
-  text-decoration: underline;
-  color: blue;
+  text-decoration: none;
+}
+
+.active {
+  cursor: default;
+  color: rgb(0, 0, 0);
+}
+.active:hover {
+  cursor: default;
+  text-decoration: none;
+  color: black;
 }
 
 #current-city {

@@ -1,4 +1,3 @@
-//real time in city
 let now = new Date();
 let time = document.querySelector(".card-text");
 let days = [
@@ -37,28 +36,6 @@ let months = [
 let month = months[now.getMonth()];
 time.innerHTML = `Currently ${hour}:${minutes} – ${date} ${month}, ${day}`;
 
-//FAKE TEMP
-//function fahrenheit1(event) {
-//event.preventDefault();
-
-//let tempF = document.querySelector("#main-degree");
-//tempF.innerHTML = Math.round((1 * 9) / 5 + 32);
-//}
-
-//function celsius1(event) {
-//event.preventDefault();
-
-//let tempC = document.querySelector("#main-degree");
-//tempC.innerHTML = 1;
-//}
-
-//let choiceC = document.querySelector("#celsius");
-//choiceC.addEventListener("click", celsius1);
-
-//let choiceF = document.querySelector("#fahrenheit");
-//choiceF.addEventListener("click", fahrenheit1);
-
-//API Geolocation
 function showUserCity(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(showGeoloc);
@@ -73,7 +50,7 @@ function showGeoloc(position) {
 }
 
 function showTemperature1(response) {
-  let temperature = Math.round(response.data.main.temp);
+  temperature = Math.round(response.data.main.temp);
   let geoPosition = document.querySelector("#main-degree");
   geoPosition.innerHTML = `${temperature}`;
   let humidity = document.querySelector("#humidity");
@@ -98,18 +75,17 @@ function showTemperature1(response) {
 let showCity = document.querySelector("#current-city");
 showCity.addEventListener("click", showUserCity);
 
-//API weather
-
 function showTemperature(event) {
   event.preventDefault();
   let chosenCity = document.querySelector("#new-city");
-  console.log(chosenCity.value);
+  apiInfo(chosenCity.value);
+}
+function apiInfo(city) {
   let apiKey = "fe1483f743b581b5520a1b725af03a49";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${chosenCity.value}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric`;
   axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature1);
 }
 
-//search engine, cities
 function changeCity(event) {
   event.preventDefault();
   document.querySelector("#city").innerHTML = `${chosenCity.value}`;
@@ -117,3 +93,28 @@ function changeCity(event) {
 
 let askCity = document.querySelector(".search-engine");
 askCity.addEventListener("submit", showTemperature);
+
+function fahrenheit1(event) {
+  event.preventDefault();
+  choiceF.classList.add("active");
+  choiceC.classList.remove("active");
+  let tempF = document.querySelector("#main-degree");
+  tempF.innerHTML = Math.round((temperature * 9) / 5 + 32);
+}
+
+function celsius1(event) {
+  event.preventDefault();
+  choiceC.classList.add("active");
+  choiceF.classList.remove("active");
+  let tempC = document.querySelector("#main-degree");
+  tempC.innerHTML = `${temperature}`;
+}
+let temperature = null;
+
+let choiceC = document.querySelector("#celsius");
+choiceC.addEventListener("click", celsius1);
+
+let choiceF = document.querySelector("#fahrenheit");
+choiceF.addEventListener("click", fahrenheit1);
+
+apiInfo("Kharkiv");
