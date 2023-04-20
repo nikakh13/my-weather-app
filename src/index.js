@@ -70,6 +70,39 @@ function showTemperature1(response) {
     "src",
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  getForecast(response.data.coord);
+}
+
+function getForecast(coordinates) {
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&units=metric`;
+  let apiKey = "6782253072f7d90462731a624097fc54";
+  axios.get(`${apiUrl}&appid=${apiKey}`).then(showForecast);
+}
+
+function showForecast(response) {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class = row>`;
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue", "Wen"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+  <div class="col">
+    <div class="dayOfWeek"> ${day} </div>
+    <img
+      src="https://openweathermap.org/img/wn/04d@2x.png"
+      alt="Clouds"
+      id="forecast-icon"
+      width = "65"
+    />
+    <div class="degree">
+      <span class="temp-max">8°</span> <span class="temp-min">5°</span>
+    </div>
+  </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
 
 let showCity = document.querySelector("#current-city");
