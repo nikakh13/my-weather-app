@@ -105,7 +105,7 @@ function showForecast(response) {
       }@2x.png"
       alt="Clouds"
       id="forecast-icon"
-      width = "65"
+      width = "80"
     />
     <div class="degree">
       <span class="temp-max">${Math.round(
