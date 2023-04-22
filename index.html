@@ -13,11 +13,14 @@
     />
     <link rel="stylesheet" href="src/styles.css" />
     <title>Veronika Weather App</title>
+    <script
+      src="https://kit.fontawesome.com/63012539ae.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
-  <body>
-    
-    <div class="container mainbody">
+  <body> 
+    <div class="container mainbody" style="max-width: 50%">
       
         <div class="container-fluid search">
           <form class="d-flex search-engine" role="search">
@@ -36,54 +39,39 @@
 
       <br />
 
-      <div class="card" style="max-width: 100%">
-        <div class="card-body">
-          <h4 class="card-title" id = "city">Enter your city</h4>
-          <p class="card-text">
-            Currently 00:00 - 00 March, Tuesday
-          </p>
-
-      <div class="container text-center">
-        <div class="row align-items-start">
-          <div class="col-6 first">
-            <div class="card">
-              <div class="card-body">
-                <div class="container text-center">
-                  <div class="row align-items-start">
-                    <div class="col">
-                     <span class="maindegree" id = "main-degree">0</span> <a href="#" class = "grade active" id="celsius">°C </a><span class = "btwn grades"> | </span><a href="#" class = "grade" id="fahrenheit">°F</a> 
+      <div class="card">
+        <div class="card-body forecast">
+          <div class="container text-center">
+            <div class="row align-items-start">
+              <div class="col-7 first">
+                <div class="card bigcity">
+                  <div class="card-body user-city">
+                    <div class="container text-center">
+                      <div class="row align-items-start city-main-name">
+                        <h4 class="card-title" id = "city">Enter your city</h4>
+                        <p class="card-text time">
+                        Currently 00:00 - 00 March, Tuesday
+                        </p>
+                      </div>
                     </div>
-                    <div class="col">
-                     <img src="https://openweathermap.org/img/wn/04d@2x.png" alt = "Clouds" id = "main-icon"/>  
-                    </div>
-                   </div>
-                 </div>
-                
-                <p class="card-text" id="main-description">Cloudy, light rain</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-6 second">
-            <div class="card">
-              <div class="card-body">
-                <div class="container text-center">
-                  <div class="row align-items-start">
-                   <div class="col">
-                      00:00 <br /><br /> <p class = "emojiday"> 🌧️ </p> 2°
-                   </div>
-                   <div class="col">
-                      06:00 <br /><br /> <p class = "emojiday"> 🌦️ </p> 1°
-                   </div>
-                   <div class="col">
-                      12:00 <br /><br /> <p class = "emojiday"> 🌧️ </p> 1°
-                   </div>
-                   <div class="col">
-                      18:00 <br /><br /> <p class = "emojiday"> 🌧️ </p> 0°
-                   </div>
                   </div>
-               </div>
-              </div>
+                </div>
+             </div>
+
+             <div class="col-5 second">
+               <div class="card bigcity">
+                <div class="card-body bigcity">
+                  <div class="container text-center">
+                    <div class="row align-items-start">
+                     <div class="col-6 main-icons"><span class="maindegree" id = "main-degree">0</span> <a href="#" class = "grade active" id="celsius">°C </a><span class = "btwn grades"> | </span><a href="#" class = "grade" id="fahrenheit">°F</a> 
+                     </div>
+                     <div class="col-6 main-icons">
+                      <img src="https://openweathermap.org/img/wn/04d@2x.png" alt = "Clouds" id = "main-icon"/>  
+                      </div>
+                     <p class="card-text" id="main-description">Cloudy, light rain</p>
+                    </div>
+                  </div>
+                </div>
              </div>
           </div>
         </div>
@@ -96,16 +84,16 @@
             <div class="container text-center">
               <div class="row align-items-start">
                <div class="col">
-                  <span class = "atmosphere"> Feels like </span> <br />🤷🏻‍♀️ <span id="feels-like">0</span>°
+                  <span class = "atmosphere"> Feels like </span> <br /> <i class="fa-solid fa-temperature-three-quarters"></i> <span id="feels-like">0</span>°
                </div>
                <div class="col">
-                 <span class = "atmosphere"> Wind </span> <br /> 🌀 <span id="wind">12</span> m/s
+                 <span class = "atmosphere"> Wind </span> <br /> <i class="fa-solid fa-wind"></i> <span id="wind">12</span> m/s
                </div>
                <div class="col">
-                  <span class = "atmosphere"> Humidity </span> <br /> 💧 <span id="humidity">65</span>%
+                  <span class = "atmosphere"> Humidity </span> <br /> <i class="fa-solid fa-droplet"></i> <span id="humidity">65</span>%
                </div>
                <div class="col">
-                  <span class = "atmosphere"> Pressure </span> <br /> 🌡️ <span id="pressure">740</span>
+                  <span class = "atmosphere"> Pressure </span> <br /> <i class="fa-solid fa-gauge"></i>  <span id="pressure">740</span>
                </div>
               </div>
             </div>
@@ -127,7 +115,6 @@
       </div>
     </div>
     <p class = "link"><a href="http://github.com/nikakh13/my-weather-app" class="myLink">Open-source code</a><span> by Veronika Potochniak</span></p>
-
     <script src="src/index.js"></script>
   </body>
 </html>

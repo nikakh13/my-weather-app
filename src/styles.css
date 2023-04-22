@@ -1,18 +1,21 @@
+body {
+  background: #fff7f3b0;
+}
 .mainbody {
-  min-width: 700px;
+  min-width: 800px;
+  padding: 10px;
 }
-.mainemoji {
-  font-size: 60px;
+
+.forecast {
+  padding: 25px;
 }
+
 .card-title {
   font-size: 56px;
 }
 
-.emojiday {
-  font-size: 30px;
-}
 .atmosphere {
-  font-size: 20px;
+  font-size: 18px;
 }
 .dayOfWeek {
   font-size: 20px;
@@ -29,12 +32,10 @@
 
 .first {
   padding: 0 12px 0 0;
-  min-width: 320px;
 }
 
 .second {
   padding: 0 0 0 12px;
-  min-width: 320px;
 }
 
 .search {
@@ -45,7 +46,7 @@
 .grade {
   font-size: 15px;
   text-decoration: none;
-  color: rgb(54, 107, 254);
+  color: #fb7c48;
   position: relative;
   bottom: 35px;
   font-weight: 500;
@@ -75,20 +76,21 @@
 
 #current-city {
   margin: 0 3px;
-  background-color: #155d40b0;
+  background-color: #fb7c48;
   color: #fff;
 }
 
 #search-city {
-  background-color: #155d40b0;
+  background-color: #fb7c48;
   color: #fff;
 }
 
 .myLink {
   text-decoration: none;
+  color: #fb7c48;
 }
 .myLink:hover {
-  color: rgb(93, 160, 255);
+  color: #7c5648;
 }
 .link {
   margin: 12px 0 0 0;
@@ -96,8 +98,40 @@
 }
 
 #main-description {
-  margin: 9px 0 0 0;
+  margin: 2.5px 0 0 0;
+  font-size: 18px;
 }
 .temp-min {
   color: rgb(157, 157, 157);
+}
+
+.city-main-name {
+  padding: 0;
+}
+
+.bigcity {
+  border-color: #fff;
+  padding: 0;
+}
+
+.time {
+  text-align: left;
+  padding: 0;
+  margin: 5px 0 0 0;
+  font-size: 19px;
+}
+
+#city {
+  text-align: left;
+  padding: 0;
+  font-size: 80px;
+  margin: 0;
+}
+
+.main-icons {
+  padding: 0;
+}
+
+.user-city {
+  padding: 0;
 }
