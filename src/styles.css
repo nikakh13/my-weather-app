@@ -1,13 +1,18 @@
 body {
-  background: #fff7f3b0;
+  background: linear-gradient(to right, #ff99661d, #ff5e612b);
 }
+
 .mainbody {
   min-width: 800px;
   padding: 10px;
 }
 
-.forecast {
+.card-body.forecast {
   padding: 25px;
+  border-color: #ffffff13;
+}
+.border {
+  border-radius: 15px;
 }
 
 .card-title {
@@ -19,7 +24,6 @@ body {
 }
 .dayOfWeek {
   font-size: 20px;
-  margin: 12px 0 0 0;
 }
 .degree {
   font-size: 20px;
@@ -41,6 +45,11 @@ body {
 .search {
   margin: 15px 30px 0 0;
   padding: 0 0 0 0;
+}
+
+.me-2 {
+  border-radius: 12px;
+  border-color: #ffffff24;
 }
 
 .grade {
@@ -76,22 +85,28 @@ body {
 
 #current-city {
   margin: 0 3px;
-  background-color: #fb7c48;
-  color: #fff;
+  background-color: #fb7b48db;
+  border-color: #fb7b48db;
+  color: #ffffff;
+  border-radius: 12px;
 }
 
 #search-city {
-  background-color: #fb7c48;
-  color: #fff;
+  background-color: #fb7b48db;
+  border-color: #fb7b48db;
+  color: #ffffff;
+  border-radius: 12px;
 }
 
 .myLink {
   text-decoration: none;
   color: #fb7c48;
 }
+
 .myLink:hover {
   color: #7c5648;
 }
+
 .link {
   margin: 12px 0 0 0;
   font-size: 18px;
