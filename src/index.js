@@ -34,7 +34,7 @@ let months = [
   "December",
 ];
 let month = months[now.getMonth()];
-time.innerHTML = `Currently ${hour}:${minutes} – ${date} ${month}, ${day}`;
+time.innerHTML = `Last updated: ${hour}:${minutes} – ${date} ${month}, ${day}`;
 
 function showUserCity(event) {
   event.preventDefault();
