@@ -12,10 +12,6 @@ body {
   border-color: #ffffff13;
 }
 
-.border {
-  border-radius: 15px;
-}
-
 .card-title {
   font-size: 56px;
 }
@@ -35,7 +31,7 @@ body {
 }
 
 .maindegree {
-  font-size: 60px;
+  font-size: 69.5px;
   padding: 0 0 3px 0;
   color: #3b3b3b;
 }
@@ -119,9 +115,11 @@ body {
 }
 
 #main-description {
-  margin: 7.5px 0 0 0;
   font-size: 18px;
   color: #3b3b3b;
+  text-align: center;
+  padding: 0;
+  max-width: 240px;
 }
 
 .temp-max {
@@ -144,7 +142,7 @@ body {
 .time {
   text-align: left;
   padding: 0;
-  margin: 10px 0 0 0;
+  margin: 17.5px 0 0 0;
   font-size: 19px;
   color: #3b3b3b;
 }
@@ -182,4 +180,22 @@ body {
 }
 #feelslike {
   color: #3b3b3b;
+}
+
+.myLinkedIn {
+  color: #3b3b3b;
+  text-decoration: none;
+}
+.myLinkedIn:hover {
+  color: #fb7b48db;
+  text-decoration: none;
+}
+
+.bordermain {
+  border-radius: 12px;
+  border-color: white;
+}
+
+.borders {
+  border-radius: 12px;
 }
